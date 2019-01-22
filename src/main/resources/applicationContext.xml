@@ -9,6 +9,9 @@
 	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
+	<!-- 导入mongo配置文件 -->
+	<import resource="classpath:mongodb-config.xml"/>
+
 	<!-- 读取配置文件 -->
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<!-- 允许JVM参数覆盖 -->
@@ -46,5 +49,5 @@
 		<!--扫描所有dao接口的实现，加入到ioc容器中 -->
 		<property name="basePackage" value="com.crawler.dao"></property>
 	</bean>
-
+	
 </beans>
